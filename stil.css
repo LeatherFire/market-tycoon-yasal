@@ -1,0 +1,44 @@
+/* docs/yasal — gizlilik ve destek sayfalarının ortak stili. Dış kaynak yok (yazı tipi, betik, izleyici): sayfa
+   kendisi de "veri toplanmıyor" desin. Açık ve koyu tema sistem ayarından. */
+:root {
+  color-scheme: light dark;
+  --zemin: #f7f9fb;
+  --kart: #ffffff;
+  --yazi: #1c2b38;
+  --soluk: #56708a;
+  --vurgu: #1f7ab8;
+  --cizgi: #dbe4ec;
+  --isaret: #fff3c4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #0f161d;
+    --kart: #17212b;
+    --yazi: #e4ecf2;
+    --soluk: #9fb3c4;
+    --vurgu: #6cb8ee;
+    --cizgi: #2a3846;
+    --isaret: #4a3d0a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--zemin);
+  color: var(--yazi);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+header { margin-bottom: 24px; }
+h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+h3 { font-size: 1.02rem; margin: 20px 0 4px; }
+p, li { margin: 6px 0; }
+ul { padding-left: 1.2em; }
+a { color: var(--vurgu); }
+.dil { display: flex; gap: 12px; font-size: 0.95rem; }
+.tarih { color: var(--soluk); font-size: 0.92rem; }
+.ozet { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 12px; padding: 12px 16px; }
+section.dil-blok { border-top: 1px solid var(--cizgi); margin-top: 40px; padding-top: 8px; }
+/* Yayından önce doldurulacak yer tutucular göze batsın. */
+.yt { background: var(--isaret); border-radius: 4px; padding: 0 4px; font-weight: 600; }
